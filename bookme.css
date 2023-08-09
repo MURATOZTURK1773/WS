@@ -55,3 +55,21 @@ input {
   border-radius: 5px;
   background-color: darkgray;
 }
+
+@media (min-width: 360px) and (max-width: 767px) {
+  .wrapper {
+    margin: 0;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .wrapper {
+      margin: 0;
+    }
+}
+
+@media (min-width: 1199px) and (max-width: 2103px) {
+  .wrapper {
+      margin: 0;
+    }
+}

@@ -135,3 +135,39 @@ footer {
   position: fixed;
 }
 
+/* MOBILE */
+
+@media (min-width: 360px) and (max-width: 767px) {
+  .header-wrapper {
+    top: -40%;
+    text-align: center;
+  }
+  h2 {
+    left: 0%;
+  }
+  #glitch {
+    display: none;
+  }
+  .letter {
+    margin: 0 20px;
+  }
+  .sidebar.open {
+    z-index: 1;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  #glitch {
+    display: inline-block;
+  }
+
+  .letter {
+    margin: 0 100px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .letter {
+    margin: 0 200px;
+  }
+}

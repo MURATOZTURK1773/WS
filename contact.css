@@ -23,3 +23,22 @@ body {
     color: rgb(12, 159, 31);
 }
   
+
+@media (min-width: 360px) and (max-width: 767px) {
+    #theForm {
+      margin: 0;
+    }
+  }
+  
+  @media (min-width: 768px) and (max-width: 1199px) {
+    #theForm {
+        margin: 0;
+      }
+  }
+  
+  @media (min-width: 1199px) and (max-width: 2103px) {
+    #theForm {
+        margin: 0;
+      }
+  }
+  
