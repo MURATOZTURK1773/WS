@@ -1,0 +1,25 @@
+/* CONTACT-PAGE */
+
+body {
+    background-color: aliceblue;
+}
+
+#theForm {
+    display: flex;
+    flex-direction: column;
+    border: 5px solid SKYBLUE;
+    width: -webkit-fill-available;
+    margin: 350px 850px;
+    box-shadow: 0 0 15px indianred;
+    padding: 20px;
+  }
+
+
+#theForm label {
+    font-weight: 600;
+} 
+
+#theForm label:hover {
+    color: rgb(12, 159, 31);
+}
+  
