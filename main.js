@@ -26,7 +26,7 @@ const focusOnMe = document.getElementById("p");
 if (!focusOnMe) throw new Error("FocusOnMe not found");
 
 focusOn?.addEventListener("mouseenter", () => {
-  focusOnMe.style.color = "orange"
+  focusOnMe.style.color = "antiquewhite"
 
 if (timeoutPageLoad) {
   clearTimeout(timeoutPageLoad);

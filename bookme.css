@@ -2,14 +2,23 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 20px;
-  background-color: antiquewhite;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 100%;
+  height: 100vh;
+  padding-top: 5%;
+  background-image: url('https://kyleshewfelt.files.wordpress.com/2011/10/events-and-speaking-book-me.jpg');
 }
 
 .wrapper {
   border: 5px solid gray;
-  width: fit-content;
+  width: 400px;
+  height: fit-content;
   padding: 15px;
-  margin: 150px 1100px;
+  margin: 0 auto;
+  background: linear-gradient(
+    rgb(249 244 244 / 30%), rgb(234 223 223 / 35%));
 }
 
 h1 {
@@ -19,6 +28,7 @@ h1 {
 .booking-form {
   max-width: 400px;
   margin: 0 auto;
+  text-align: center;
 }
 
 .form-group {
@@ -51,10 +61,79 @@ button:hover {
 }
 
 input {
-  padding: 2px;
+  padding: 10px;
   border-radius: 5px;
   background-color: darkgray;
+  font-size: 15px;
 }
+
+/* SIDEBAR */
+
+
+.sidebar {
+  position: fixed;
+  right: 20px;
+  top: 30%;
+  transition: transform 0.5s ease; 
+  transform: translateX(100%);
+}
+
+.sidebar.open {
+  transform: translateX(0);
+  right: 1px;
+}
+
+.sidebar i {
+  background-color: darkorange;
+  font-size: 1rem;
+  border: 1px solid blue;
+  padding: 4px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.who-am-i {
+  display: none;
+  border: 2px solid red;
+  border-radius: 5px;
+  padding: 5px;
+  background-color: skyblue;
+}
+
+.sidebar #aboutme {
+  margin-top: 3px;
+  border: 1px solid;
+}
+
+.sidebar #bookme {
+  margin-bottom: 3px;
+}
+
+.sidebar #home,
+.sidebar #bookme,
+.sidebar #contact,
+.sidebar #aboutme {
+  border: 1px solid;
+  padding: 3px;
+  border-radius: 0.2rem;
+  text-align: center;
+}
+
+.sidebar #home:hover,
+.sidebar #bookme:hover,
+.sidebar #contact:hover,
+.sidebar #aboutme:hover {
+  background-color: sandybrown;
+}
+
+.sidebar #home a,
+.sidebar #bookme a,
+.sidebar #contact a,
+.sidebar #aboutme a {
+  text-decoration: none;
+  color: yellow;
+}
+
 
 @media (min-width: 360px) and (max-width: 767px) {
   .wrapper {

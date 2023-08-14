@@ -1,15 +1,20 @@
 /* CONTACT-PAGE */
 
 body {
-    background-color: aliceblue;
+  background-image: url(/paris-6384758_1920.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 100%;
+  height: 100vh;
+  padding-top: 5%;
 }
 
 #theForm {
     display: flex;
     flex-direction: column;
     border: 5px solid SKYBLUE;
-    width: -webkit-fill-available;
-    margin: 350px 850px;
+    width: 500px;
     box-shadow: 0 0 15px indianred;
     padding: 20px;
   }
@@ -17,28 +22,95 @@ body {
 
 #theForm label {
     font-weight: 600;
+    color: yellow;
 } 
 
 #theForm label:hover {
     color: rgb(12, 159, 31);
 }
   
+/* SIDEBAR */ 
+.sidebar {
+  position: fixed;
+  right: 20px;
+  top: 30%;
+  transition: transform 0.5s ease; 
+  transform: translateX(100%);
+}
+
+.sidebar.open {
+  transform: translateX(0);
+  right: 1px;
+}
+
+.sidebar i {
+  background-color: darkorange;
+  font-size: 1rem;
+  border: 1px solid blue;
+  padding: 4px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.who-am-i {
+  display: none;
+  border: 2px solid red;
+  border-radius: 5px;
+  padding: 5px;
+  background-color: skyblue;
+}
+
+.sidebar #aboutme {
+  margin-top: 3px;
+  border: 1px solid;
+}
+
+.sidebar #bookme {
+  margin-bottom: 3px;
+}
+
+.sidebar #home,
+.sidebar #bookme,
+.sidebar #contact,
+.sidebar #aboutme {
+  border: 1px solid;
+  padding: 3px;
+  border-radius: 0.2rem;
+  text-align: center;
+}
+
+.sidebar #home:hover,
+.sidebar #bookme:hover,
+.sidebar #contact:hover,
+.sidebar #aboutme:hover {
+  background-color: sandybrown;
+}
+
+.sidebar #home a,
+.sidebar #bookme a,
+.sidebar #contact a,
+.sidebar #aboutme a {
+  text-decoration: none;
+  color: yellow;
+}
+
 
 @media (min-width: 360px) and (max-width: 767px) {
     #theForm {
-      margin: 0;
+      margin: 0 auto;
+      width: 400px;
     }
   }
   
   @media (min-width: 768px) and (max-width: 1199px) {
     #theForm {
-        margin: 0;
+        margin: 0 auto;
       }
   }
   
-  @media (min-width: 1199px) and (max-width: 2103px) {
+  @media (min-width: 1199px) and (max-width: 2600px) {
     #theForm {
-        margin: 0;
+        margin: 0 auto;
       }
   }
   
