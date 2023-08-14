@@ -164,13 +164,13 @@ footer {
   }
   .letter {
     margin: 0 20px;
-    top: 16%;
+    top: 32%;
   }
   .sidebar.open {
     z-index: 1;
   }
   body {
-    height: 205vh;
+    height: 600vh; /* for mobile */
   }
 }
 
@@ -181,6 +181,19 @@ footer {
 
   .letter {
     margin: 0 100px;
+  }
+
+  body {
+    height: 600vh; /* for mobile */
+  }
+
+  .header-wrapper {
+    top: -49%;
+    text-align: center;
+  }
+
+  .header-wrapper h2 {
+    left: 0%;
   }
 }
 
