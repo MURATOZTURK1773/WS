@@ -107,9 +107,8 @@ body {
 
 @media (min-width: 360px) and (max-width: 767px) {
     #theForm {
-      /* margin: 0 auto; */
-      margin-left: -7px;
-      width: 400px;
+      margin: 0 auto;
+      width: 300px;
     }
   }
   
