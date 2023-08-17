@@ -26,13 +26,15 @@ const focusOnMe = document.getElementById("p");
 if (!focusOnMe) throw new Error("FocusOnMe not found");
 
 focusOn?.addEventListener("mouseenter", () => {
-  focusOnMe.style.color = "antiquewhite"
+  focusOnMe.style.backgroundColor = "black";
+  focusOnMe.style.color = "tomato"
 
 if (timeoutPageLoad) {
   clearTimeout(timeoutPageLoad);
 }
 
 timeoutPageLoad = setTimeout(() => {
+  focusOnMe.style.backgroundColor = "initial";
   focusOnMe.style.color = "black"
 }, 25000)
 })

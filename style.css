@@ -48,6 +48,8 @@ body {
 }
 
 span {
+  border-radius: 5px;
+  padding: 0px 5px;
   font-family: "Arial", sans-serif;
   font-size: 48px;
   top: 29px;
@@ -96,7 +98,7 @@ h2 {
   border: 2px solid red;
   border-radius: 5px;
   padding: 5px;
-  background-color: skyblue;
+  background-color: #87afeb80;
 }
 
 .sidebar #aboutme {
@@ -112,7 +114,7 @@ h2 {
 .sidebar #bookme,
 .sidebar #contact,
 .sidebar #aboutme {
-  border: 1px solid;
+  border: 2px solid darkolivegreen;
   padding: 3px;
   border-radius: 0.2rem;
   text-align: center;
@@ -144,6 +146,17 @@ h2 {
   padding-bottom: 100px;
 }
 
+.letter .logos {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: inherit;
+  gap: 90px;
+  position: relative;
+  top: 90px;
+  flex-wrap: wrap;
+}
+
 footer {
   bottom: 0;
   position: fixed;
@@ -170,11 +183,11 @@ footer {
     z-index: 1;
   }
   body {
-    height: 600vh; /* for mobile */
+    height: 650vh; /* for mobile */
   }
 }
 
-@media (min-width: 768px) and (max-width: 1199px) {
+@media (min-width: 768px) and (max-width: 1600px) {
   #glitch {
     display: inline-block;
   }
@@ -184,7 +197,7 @@ footer {
   }
 
   body {
-    height: 600vh; /* for mobile */
+    height: 650vh; /* for mobile */
   }
 
   .header-wrapper {

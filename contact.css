@@ -94,6 +94,16 @@ body {
   color: yellow;
 }
 
+.excali {
+  border: 2px solid transparent;
+  width: 275px;
+  margin: 0 auto;
+  color: wheat;
+}
+
+.excali p a {
+  color: white;
+}
 
 @media (min-width: 360px) and (max-width: 767px) {
     #theForm {
