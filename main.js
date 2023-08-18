@@ -20,24 +20,34 @@ $glitchStopper?.addEventListener("mouseover", function () {
   resetTimeout();
 });
 
-const focusOn = document.getElementById("aboutme");
-const focusOnMe = document.getElementById("p");
+const focusOn = document.querySelector("#aboutme");
+const focusOnMe = document.querySelector("#p");
+const headerDeleter = document.querySelector(".header-wrapper");
+const logoDeleter = document.querySelector(".logos");
+const focusOnWhole = document.body;
 
 if (!focusOnMe) throw new Error("FocusOnMe not found");
 
 focusOn?.addEventListener("mouseenter", () => {
-  focusOnMe.style.backgroundColor = "black";
-  focusOnMe.style.color = "tomato"
+  headerDeleter.style.display = "none";
+  logoDeleter.style.display = "none";
+  focusOnWhole.style.backgroundImage = "initial";
+  focusOnWhole.style.backgroundColor = "black";
+  focusOnMe.style.color = "tomato";
 
-if (timeoutPageLoad) {
-  clearTimeout(timeoutPageLoad);
-}
+  if (timeoutPageLoad) {
+    clearTimeout(timeoutPageLoad);
+  }
 
-timeoutPageLoad = setTimeout(() => {
-  focusOnMe.style.backgroundColor = "initial";
-  focusOnMe.style.color = "black"
-}, 25000)
-})
+  timeoutPageLoad = setTimeout(() => {
+    headerDeleter.style.display = "block";
+    logoDeleter.style.display = "flex";
+    focusOnWhole.style.backgroundImage =
+      "url('https://scriptsender.com/wp-content/uploads/impossible-landing-page-background.jpg')";
+    focusOnWhole.style.backgroundColor = "initial";
+    focusOnMe.style.color = "black";
+  }, 25000);
+});
 
 // SIDEBAR //
 const sidebar = document.getElementById("sidebar");
