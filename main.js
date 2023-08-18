@@ -26,6 +26,36 @@ const headerDeleter = document.querySelector(".header-wrapper");
 const logoDeleter = document.querySelector(".logos");
 const focusOnWhole = document.body;
 
+//TIMER
+const timerDisplay = document.querySelector("#timer");
+let countdown = 25;
+let timerInterval;
+
+focusOn.addEventListener("mouseenter", () => {
+  timerDisplay.style.display = "block";
+  clearInterval(timerInterval);
+  timerDisplay.textContent = countdown;
+
+  timerInterval = setInterval(() => {
+    countdown -= 1;
+    timerDisplay.textContent = countdown;
+
+    if (countdown <= 0) {
+      clearInterval(timerInterval);
+      timerDisplay.textContent = "Need more time? click again, please!!!"
+
+      setTimeout(() => {
+        timerDisplay.textContent = "";
+        countdown = 25
+      }, 3000);
+    }
+  }, 1000);
+})
+
+document.addEventListener("click", () => {
+  timerDisplay.textContent = "";
+})
+
 if (!focusOnMe) throw new Error("FocusOnMe not found");
 
 focusOn?.addEventListener("mouseenter", () => {
