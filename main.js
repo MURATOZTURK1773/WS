@@ -28,33 +28,41 @@ const focusOnWhole = document.body;
 
 //TIMER
 const timerDisplay = document.querySelector("#timer");
-let countdown = 25;
+let countdown = 35;
 let timerInterval;
 
 focusOn.addEventListener("mouseenter", () => {
-  timerDisplay.style.display = "block";
   clearInterval(timerInterval);
   timerDisplay.textContent = countdown;
 
   timerInterval = setInterval(() => {
     countdown -= 1;
-    timerDisplay.textContent = countdown;
 
-    if (countdown <= 0) {
+    if (countdown <= 33) {
+      timerDisplay.style.display = "none";
+    }
+
+    if (countdown <= 5) {
+      timerDisplay.style.display = "block";
+    }
+
+    if (countdown === 0) {
       clearInterval(timerInterval);
-      timerDisplay.textContent = "Need more time? click again, please!!!"
+      timerDisplay.textContent = "Need more time? Click again, please!!!";
 
       setTimeout(() => {
-        timerDisplay.textContent = "";
-        countdown = 25
+        timerDisplay.style.display = "none";
+        countdown = 35;
       }, 3000);
+    } else {
+      timerDisplay.textContent = countdown;
     }
   }, 1000);
-})
+});
 
 document.addEventListener("click", () => {
   timerDisplay.textContent = "";
-})
+});
 
 if (!focusOnMe) throw new Error("FocusOnMe not found");
 
@@ -76,7 +84,7 @@ focusOn?.addEventListener("mouseenter", () => {
       "url('https://scriptsender.com/wp-content/uploads/impossible-landing-page-background.jpg')";
     focusOnWhole.style.backgroundColor = "initial";
     focusOnMe.style.color = "black";
-  }, 25000);
+  }, 35000);
 });
 
 // SIDEBAR //

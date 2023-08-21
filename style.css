@@ -192,7 +192,7 @@ footer {
     z-index: 1;
   }
   body {
-    height: 650vh; /* for mobile */
+    height: 660vh; /* for mobile */
   }
 }
 
